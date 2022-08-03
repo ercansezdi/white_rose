@@ -58,12 +58,14 @@ class database:
         else:
             baglan = sqlite3.connect( self.path +"dataes.db")
             veri = baglan.cursor()
+            print(2)
             veri.execute("UPDATE data SET adi = '" + user_info[0] + "' WHERE telefon = '" + str(user_info[2])+"'" )
             veri.execute("UPDATE data SET soyadi = '" + user_info[1] + "' WHERE telefon = '" + str(user_info[2])+"'" )
             veri.execute("UPDATE data SET kart_num = '" + user_info[3] + "' WHERE telefon = '" + str(user_info[2])+"'" )
             veri.execute("UPDATE data SET bakiye = '" + user_info[4] + "' WHERE telefon = '" + str(user_info[2])+"'" )
             baglan.commit()
             baglan.close()
+            print(3)
         return True
     def get_user(self,telefon):
         baglan = sqlite3.connect( self.path +"dataes.db")
@@ -72,6 +74,13 @@ class database:
             data = veri.execute("SELECT * FROM data ").fetchall()
         else:
             data = veri.execute("SELECT * FROM data WHERE telefon = '{}'".format(telefon)).fetchall()
+        baglan.commit()
+        baglan.close()
+        return data
+    def get_user_with_card_num(self,card_num):
+        baglan = sqlite3.connect( self.path +"dataes.db")
+        veri = baglan.cursor()
+        data = veri.execute("SELECT * FROM data WHERE kart_num = '{}'".format(card_num)).fetchall()
         baglan.commit()
         baglan.close()
         return data
@@ -89,6 +98,7 @@ class database:
         baglan.close()
         return data[0]
     def update_balance(self,telefon_number, new_balance):#user_info is array
+        new_balance = str(new_balance)
         baglan = sqlite3.connect( self.path +"dataes.db")
         veri = baglan.cursor()
         veri.execute("UPDATE data SET bakiye = '" + new_balance + "' WHERE telefon = '" + str(telefon_number)+"'" )

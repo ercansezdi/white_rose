@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="newPrefix">
     <file>icons/menu.png</file>
+    <file>icons/menu.png</file>
     <file>icons/search.png</file>
     <file>icons/turkey.png</file>
     <file>icons/usa.png</file>

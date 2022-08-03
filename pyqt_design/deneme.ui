@@ -451,6 +451,108 @@ background-color:#4f4f4f;
                <string>Waiting Data...</string>
               </property>
              </widget>
+             <widget class="QWidget" name="verticalLayoutWidget_3">
+              <property name="geometry">
+               <rect>
+                <x>240</x>
+                <y>50</y>
+                <width>231</width>
+                <height>251</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_13">
+               <item>
+                <widget class="QLabel" name="information_name">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="information_surname">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="information_card_uuid">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="information_phone_num">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="information_balance">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QLabel" name="information_label_real">
+              <property name="geometry">
+               <rect>
+                <x>240</x>
+                <y>310</y>
+                <width>211</width>
+                <height>61</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>24</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
             </widget>
             <widget class="QWidget" name="users">
              <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -496,6 +598,10 @@ background-color:#4f4f4f;
                        <font>
                         <pointsize>11</pointsize>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border :2px solid ;
+</string>
                       </property>
                       <property name="text">
                        <string/>
@@ -786,7 +892,7 @@ background-color:#4f4f4f;
               <widget class="QPushButton" name="add_user_frame_add_button">
                <property name="geometry">
                 <rect>
-                 <x>220</x>
+                 <x>300</x>
                  <y>400</y>
                  <width>241</width>
                  <height>41</height>
@@ -798,6 +904,10 @@ background-color:#4f4f4f;
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border :2px solid ;
+</string>
                </property>
                <property name="text">
                 <string>Add User</string>
@@ -816,10 +926,10 @@ background-color:#4f4f4f;
               <widget class="QLabel" name="add_user_frame_warning_label">
                <property name="geometry">
                 <rect>
-                 <x>200</x>
+                 <x>300</x>
                  <y>450</y>
-                 <width>351</width>
-                 <height>20</height>
+                 <width>231</width>
+                 <height>41</height>
                 </rect>
                </property>
                <property name="font">
@@ -889,6 +999,10 @@ background-color:#4f4f4f;
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border :2px solid ;
+</string>
                   </property>
                   <property name="text">
                    <string>Get User</string>
@@ -1098,7 +1212,7 @@ background-color:#4f4f4f;
                     </font>
                    </property>
                    <property name="text">
-                    <string/>
+                    <string>Phone Number</string>
                    </property>
                   </widget>
                  </widget>
@@ -1121,6 +1235,10 @@ background-color:#4f4f4f;
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="styleSheet">
+                <string notr="true">border :2px solid ;
+</string>
+               </property>
                <property name="text">
                 <string>Update User</string>
                </property>
@@ -1128,10 +1246,10 @@ background-color:#4f4f4f;
               <widget class="QLabel" name="update_frame_warning_label">
                <property name="geometry">
                 <rect>
-                 <x>450</x>
+                 <x>490</x>
                  <y>450</y>
-                 <width>251</width>
-                 <height>21</height>
+                 <width>151</width>
+                 <height>41</height>
                 </rect>
                </property>
                <property name="font">
@@ -1199,6 +1317,10 @@ background-color:#4f4f4f;
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border :2px solid ;
+</string>
                   </property>
                   <property name="text">
                    <string>Get User</string>
@@ -1440,6 +1562,10 @@ background-color:#4f4f4f;
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="styleSheet">
+                <string notr="true">border :2px solid ;
+</string>
+               </property>
                <property name="text">
                 <string>Delete User</string>
                </property>
@@ -1447,10 +1573,10 @@ background-color:#4f4f4f;
               <widget class="QLabel" name="delete_frame_warning_label">
                <property name="geometry">
                 <rect>
-                 <x>450</x>
+                 <x>500</x>
                  <y>450</y>
-                 <width>251</width>
-                 <height>21</height>
+                 <width>141</width>
+                 <height>41</height>
                 </rect>
                </property>
                <property name="font">
@@ -1518,6 +1644,10 @@ background-color:#4f4f4f;
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border :2px solid ;
+</string>
                   </property>
                   <property name="text">
                    <string>Get User</string>
@@ -1759,6 +1889,10 @@ background-color:#4f4f4f;
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="styleSheet">
+                <string notr="true">border :2px solid ;
+</string>
+               </property>
                <property name="text">
                 <string>Add Balance</string>
                </property>
@@ -1766,10 +1900,10 @@ background-color:#4f4f4f;
               <widget class="QLabel" name="add_balance_frame_warning_label">
                <property name="geometry">
                 <rect>
-                 <x>450</x>
-                 <y>450</y>
-                 <width>251</width>
-                 <height>21</height>
+                 <x>490</x>
+                 <y>440</y>
+                 <width>151</width>
+                 <height>41</height>
                 </rect>
                </property>
                <property name="font">
@@ -1784,8 +1918,8 @@ background-color:#4f4f4f;
               <widget class="QLineEdit" name="add_balance_frame_how_much">
                <property name="geometry">
                 <rect>
-                 <x>500</x>
-                 <y>310</y>
+                 <x>490</x>
+                 <y>320</y>
                  <width>151</width>
                  <height>41</height>
                 </rect>
@@ -1835,6 +1969,10 @@ background-color:#4f4f4f;
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="styleSheet">
+                <string notr="true">border :2px solid ;
+</string>
+               </property>
                <property name="text">
                 <string>Set Config File</string>
                </property>
@@ -1842,8 +1980,8 @@ background-color:#4f4f4f;
               <widget class="QWidget" name="verticalLayoutWidget">
                <property name="geometry">
                 <rect>
-                 <x>60</x>
-                 <y>70</y>
+                 <x>170</x>
+                 <y>80</y>
                  <width>141</width>
                  <height>171</height>
                 </rect>
@@ -1910,8 +2048,8 @@ background-color:#4f4f4f;
               <widget class="QWidget" name="verticalLayoutWidget_2">
                <property name="geometry">
                 <rect>
-                 <x>210</x>
-                 <y>70</y>
+                 <x>320</x>
+                 <y>80</y>
                  <width>151</width>
                  <height>181</height>
                 </rect>
