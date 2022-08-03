@@ -1,13 +1,13 @@
-import db
+import socket
 
+UDP_IP = "127.0.0.1"
+UDP_PORT = 5005
 
-if __name__ == "__main__":
-    database = db.database("config")
-    user = ["ercn","sezdi","5453034444","15ag0115","50"]
-    result = database.add_user(user)
-    #result = database.delete_user(user[2])
-    
-    user = ["sezdi","ercam","5453034444","15155115","45"]
-    
-    result = database.update_user(user)
-    print(result)
+sock = socket.socket(socket.AF_INET, # Internet
+                    socket.SOCK_DGRAM) # UDP
+sock.bind((UDP_IP, UDP_PORT))
+ 
+while True:
+    print(111)
+    data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
+    print("received message: %s" % data)
