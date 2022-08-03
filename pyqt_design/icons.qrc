@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>icons/menu.png</file>
+    <file>icons/search.png</file>
+    <file>icons/turkey.png</file>
+    <file>icons/usa.png</file>
+    <file>icons/wallet.png</file>
+    <file>icons/add-user.png</file>
+    <file>icons/delete-user.png</file>
+    <file>icons/main-page.png</file>
+    <file>icons/settings.png</file>
+    <file>icons/update-user.png</file>
+    <file>icons/user.png</file>
+  </qresource>
+</RCC>
