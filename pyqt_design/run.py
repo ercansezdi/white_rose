@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication,QSizeGrip
 from PyQt5.QtCore import QTimer,Qt,QEasingCurve, QPropertyAnimation
 from PyQt5 import QtGui
 import io
+import db
 
 class MainWindow(QMainWindow):
     def __init__(self):
