@@ -2,7 +2,7 @@ import socket
 
 UDP_IP = "127.0.0.1"
 UDP_PORT = 5005
-MESSAGE = b"12adc10"
+MESSAGE = b"12adc4"
 
 
 sock = socket.socket(socket.AF_INET, # Internet

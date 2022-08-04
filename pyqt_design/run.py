@@ -111,8 +111,8 @@ class MainWindow(QMainWindow):
             
         self.ui.information_name.setText("Name :" + data[0][0])
         self.ui.information_surname.setText("Surname :" + data[0][1])
-        self.ui.information_card_uuid.setText("Card UUID :" + data[0][2])
-        self.ui.information_phone_num.setText("Phone Num :" + data[0][3])
+        self.ui.information_card_uuid.setText("Card UUID :" + data[0][3])
+        self.ui.information_phone_num.setText("Phone Num :" + data[0][2])
 
     def show_users(self):
         search_text = self.ui.users_frame_search_entry.text()
@@ -139,7 +139,7 @@ class MainWindow(QMainWindow):
     def add_user(self):
         user = [self.ui.add_user_frame_entry_name.text(),self.ui.add_user_frame_entry_surname.text(),self.ui.add_user_frame_entry_telephone.text(),self.ui.add_user_frame_entry_card_number.text(),self.ui.add_user_frame_entry_balance.text()]
         if "" in user:
-            self.ui.add_user_frame_warning_label.setText("You entered incomplete information !!!")
+            self.ui.add_user_frame_warning_label.setText("You entered incomplete \ninformation !!!")
             self.ui.add_user_frame_warning_label.setStyleSheet("color: red;")
         else:
             result = self.database.add_user(user)
@@ -167,7 +167,7 @@ class MainWindow(QMainWindow):
     def delete_user(self):
         user_telefon = self.ui.delete_frame_get_user_entry.text()
         if user_telefon == "":
-            self.ui.delete_frame_warning_label.setText("You entered incomplete information !!!")
+            self.ui.delete_frame_warning_label.setText("You entered incomplete \ninformation !!!")
             self.ui.delete_frame_warning_label.setStyleSheet("color: red;")
         else:
             result = self.database.delete_user(user_telefon)
@@ -180,7 +180,7 @@ class MainWindow(QMainWindow):
     def update_user(self):
         user_telefon = self.ui.update_frame_get_user_entry.text()
         if user_telefon == "":
-            self.ui.update_frame_warning_label.setText("Phone number to call was not entered !!!")
+            self.ui.update_frame_warning_label.setText("Phone number to call \nwas not entered !!!")
             self.ui.update_frame_warning_label.setStyleSheet("color: red;")
         else:
             data = self.database.get_user(user_telefon)
@@ -196,7 +196,7 @@ class MainWindow(QMainWindow):
     def update_database_user(self):
         user_telefon = self.ui.update_frame_get_user_entry.text()
         if user_telefon == "":
-            self.ui.update_frame_warning_label.setText("Phone number to call was not entered !!!")
+            self.ui.update_frame_warning_label.setText("Phone number to call \nwas not entered !!!")
             self.ui.update_frame_warning_label.setStyleSheet("color: red;")
         else:
             data = []
@@ -221,19 +221,19 @@ class MainWindow(QMainWindow):
     def  add_database_balance(self):
         user_telefon = self.ui.add_balance_frame_get_user_entry.text()
         if user_telefon == "":
-            self.ui.add_balance_frame_warning_label.setText("Phone number to call was not entered !!!")
+            self.ui.add_balance_frame_warning_label.setText("Phone number to call \nwas not entered !!!")
             self.ui.add_balance_frame_warning_label.setStyleSheet("color: red;")
         else:
             data = self.database.get_user(user_telefon)
             if len(data) != 0:
                 if self.ui.add_balance_frame_how_much.text() == "" or not self.ui.add_balance_frame_how_much.text().isnumeric():
-                    self.ui.add_balance_frame_warning_label.setText("Balance entered incorrectly !!!")
+                    self.ui.add_balance_frame_warning_label.setText("Balance entered \nincorrectly !!!")
                     self.ui.add_balance_frame_warning_label.setStyleSheet("color: red;")
                 else:
-                    balance = str(float(data[0][4]) + float(self.ui.add_balance_frame_how_much.text()))
+                    balance = str(int(data[0][4]) + int(self.ui.add_balance_frame_how_much.text()))
                     res = self.database.update_balance(data[0][2],balance)
                     self.ui.add_balance_frame_balance.setText(balance +"  TL")
-                    self.ui.add_balance_frame_warning_label.setText("User information updated  !!!")
+                    self.ui.add_balance_frame_warning_label.setText("User information \nupdated  !!!")
                     self.ui.add_balance_frame_warning_label.setStyleSheet("color: green;")
             else:
                 self.ui.add_balance_frame_warning_label.setText("User not found !!!")
@@ -241,7 +241,7 @@ class MainWindow(QMainWindow):
     def add_balance(self):
         user_telefon = self.ui.add_balance_frame_get_user_entry.text()
         if user_telefon == "":
-            self.ui.add_balance_frame_warning_label.setText("Phone number to call was not entered !!!")
+            self.ui.add_balance_frame_warning_label.setText("Phone number to call \nwas not entered !!!")
             self.ui.add_balance_frame_warning_label.setStyleSheet("color: red;")
         else:
             data = self.database.get_user(user_telefon)
@@ -281,6 +281,8 @@ class MainWindow(QMainWindow):
     
         with open('config//config.ini', 'w') as configfile:
             self.config.write(configfile)
+        self.ui.settings_frame_information.setText("config.ini updated !!!")
+        self.ui.settings_frame_information.setStyleSheet("color: green;")
 
     def menu_kaydir(self):
         width = self.ui.left_menu.width()
